@@ -1,0 +1,25 @@
+{
+  "name": "Talala",
+  "authors": [
+    "José Ignacio Jaraba Atehortúa <jijaraba@hotmail.com>"
+  ],
+  "description": "Website Mago Talala",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "install": {
+    "path": "public/js/vendor"
+  },
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "jquery.countdown": "~2.1.0"
+  }
+}

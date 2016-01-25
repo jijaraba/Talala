@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mago Talala</title>
+    <link rel="stylesheet" href="css/talala.css">
+</head>
+<body>
+    <section class="wrapper">
+        <ul id="scene">
+            <li class="layer" data-depth="0.00">
+                <img src="img/bg.png">
+            </li>
+
+            <li class="layer logo" data-depth="0.20">
+                <img src="img/logo.png">
+            </li>
+            <li class="layer mago" data-depth="0.40">
+                <img src="img/mago.png">
+            </li>
+            <li class="layer countdown" data-depth="0.60">
+                <div id="clock"></div>
+            </li>
+        </ul>
+    </section>
+    <script src="js/vendor/parallax/parallax.min.js"></script>
+    <script src="js/vendor/jquery/jquery.js"></script>
+    <script src="js/vendor/jquery.countdown/jquery.countdown.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    </script>
+    <script>
+        $('#clock').countdown('2016/02/15', function(event) {
+            var $this = $(this).html(event.strftime('%-D día%!D %H:%M:%S'));
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+.wrapper {
+    min-height: 460px;
+    position: absolute;
+    overflow: hidden;
+    display: table;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.mago img  {
+    width: 700px;
+    margin-top: 150px;
+    margin-left: 600px;
+}
+
+.logo img  {
+    margin-left: 40%;
+    margin-right: 50%;
+    margin-top: 60px;
+}
+
+.countdown #clock  {
+    margin-left: 30%;
+    margin-right: 50%;
+    margin-top: 600px;
+    background: #0072BC;
+    font-size: 5em;
+    width: 600px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border: dotted 2px white;
+}
+
