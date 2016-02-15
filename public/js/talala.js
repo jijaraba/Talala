@@ -1,0 +1,2 @@
+(function(){var n;n={Main:function(){var n;return n={menu_extended:!1},this.init=function(n){$(window).on("scroll",this.onScroll),$(window).on("resize",this.onResize),this.eventHandler(n)},this.onScroll=function(){},this.onResize=function(){TalalaUtils.Global.setHeightSlider("#viejooeste_container_slider"),console.log(window.innerHeight)},this.gallery_global=function(){},this.eventHandler=function(n){return console.log(n),TalalaUtils.Global.setHeightBody()},this.init(n)}},$(function(){return window.main=new n.Main})}).call(this);
+//# sourceMappingURL=talala.js.map

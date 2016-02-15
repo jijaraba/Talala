@@ -1,0 +1,85 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Primary Colors.
+$brand-color01: #0072BC;
+$brand-color02: #FFFFFF;
+$brand-color03: #000000;
+$brand-color04: #9B9B9B;
+$brand-color05: #9C9C9C;
+$brand-color06: #757575;
+$brand-color06: #444444;
+
+//## Secondary Colors
+$secondary-color01: white;
+
+//##Border Color
+$border-color-01: #ddd;
+$border-color-02: #edeff0;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+$font-family-01: "MuseoSans 100",Helvetica Neue, Helvetica, sans-serif;
+$font-family-02: "MuseoSans 300",Helvetica Neue, Helvetica, sans-serif;
+$font-family-03: "MuseoSans 500",Helvetica Neue, Helvetica, sans-serif;
+$font-family-04: "MuseoSans 700",Helvetica Neue, Helvetica, sans-serif;
+
+
+//== Sizes
+//
+//## Width
+$max-width: 100%;
+
+
+//== Mixin
+//
+//## Shadows.
+@mixin text-shadow($h-shadow: 1px, $v-shadow: 1px, $blur: 2px, $spread: 0px, $color: $brand-color-12, $opacity: 0.3) {
+  text-shadow: $h-shadow $v-shadow $blur $spread rgba($color, $opacity);
+}
+
+@mixin box-shadow-extend($shadow...) {
+  box-shadow: $shadow;
+}
+
+//## Border.
+@mixin border-top-zigzag($height, $size, $color-outer) {
+  & {
+    height: $height;
+  }
+  &:before {
+    top: $height;
+    background-position: left top;
+    @include background(linear-gradient(-135deg, $color-outer $size / 2, transparent 0), linear-gradient(135deg, $color-outer $size / 2, transparent 0));
+    @include border-zigzag-helper($size, $color-outer);
+  }
+}
+
+@mixin border-bottom-zigzag($height, $size, $color-outer) {
+  & {
+    height: $height;
+  }
+  &:after {
+    bottom: $height;
+    background-position: left bottom;
+    @include background(linear-gradient(-45deg, $color-outer $size / 2, transparent 0), linear-gradient(45deg, $color-outer $size / 2, transparent 0));
+    @include border-zigzag-helper($size, $color-outer);
+  }
+}
+
+@mixin border-zigzag-helper($size, $color-outer) {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: $size;
+  background-repeat: repeat-x;
+  background-size: $size $size;
+}

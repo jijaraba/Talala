@@ -2,40 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mago Talala</title>
+    <title>Mago Talala - Eventos de Magia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="BigMountain" />
-    <meta name="description" content="Magia Cómica en Medellín" />
-    <meta name="keywords" content="Magia,Cómica,Medellín" />
+    <meta name="description" content="El Mago Talala es la mezcla ideal entre el humor y la magia, un espectáculo que rompe el esquema tradicional con un estilo de “magia de lo Absurdo”" />
+    <meta name="keywords" content="Magia,Cómica,Medellín,Eventos Empresariales,Producción de Radio" />
     <link rel="stylesheet" href="css/talala.css">
+    <script src="js/Utils.js"></script>
 </head>
 <body>
-    <section class="wrapper">
+    <header>
+        <section class="talala-header">
+            <div class="talala-logo"></div>
+            <div class="talala-nav">
+                <nav>
+                    <div class="talala-phone" itemscope itemtype="http://schema.org/Person">
+                        <span itemprop="telephone">(+57) 3174369133</span>
+                    </div>
+                    <ul class="normal display-horizontal col-100">
+                        <li class="col-20"><a href="">Home</a></li>
+                        <li class="col-20"><a href="">Galería</a></li>
+                        <li class="col-20"><a href="">Eventos</a></li>
+                        <li class="col-20"><a href="">Contratar</a></li>
+                        <li class="col-20"><a href="">Contacto</a></li>
+                    </ul>
+                    <ul class="mobile display-horizontal col-100">
+                        <li class="col-100"><a href="">X</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <section class="talala-slider wrapper">
         <ul id="scene">
             <li class="layer bg" data-depth="0.00">
                 <img src="img/bg.png">
-            </li>
-
-            <li class="layer logo" data-depth="0.20">
-                <img src="img/logo.png">
             </li>
             <li class="layer chicken02" data-depth="0.30">
                 <img src="img/chicken02.png">
             </li>
             <li class="layer magician" data-depth="0.40">
-                <img src="img/mago.png">
+                <img src="img/magician01.png">
             </li>
             <li class="layer chicken" data-depth="0.60">
-                <img src="img/pollo.png">
+                <img src="img/chicken01.png">
             </li>
         </ul>
-        <div class="countdown">
-            <div id="clock"></div>
+        <div class="slider-new">
+            <div class="arrow-left"></div>
+            <div class="arrow-right"></div>
         </div>
+        <div class="talala-down" id="talala_indicator">
+            <span>Desplazar hacia abajo</span>
+            <br>
+            <span class="talala-icon-indicator"></span>
+        </div>
+    </section>
+    <section class="talala-info">
+        <div class="info-container">
+            <ul class="display-horizontal col-100">
+                <li class="col-40">
+                    <img src="img/magician02.png" alt="Mago Talala">
+                </li>
+                <li class="col-60">
+                    <article class="talala-container-text">
+                        <h2>Mago Talala</h2>
+                        <p>
+                            <strong>El Mago Talala</strong> es la mezcla ideal entre el humor y la magia, un espectáculo que rompe el
+                            esquema tradicional con un estilo de “Magia de lo Absurdo”, siendo un complemento perfecto
+                            para la Comicidad.
+                        </p>
+                    </article>
+                    <ul class="talala-services-main display-horizontal col-100">
+                        <li class="col-30">Especificaciones Eventos</li>
+                        <li class="col-40">
+                            <div itemscope itemtype="http://schema.org/Person">
+                                <span itemprop="telephone">(+57) 3174369133</span>
+                                <span itemprop="email">info@magotalala.com</span>
+                            </div>
+                        </li>
+                        <li class="col-30">Contratar ></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="talala-services">
+
     </section>
     <script src="js/vendor/parallax/parallax.min.js"></script>
     <script src="js/vendor/jquery/jquery.js"></script>
     <script src="js/vendor/jquery.countdown/jquery.countdown.js"></script>
+    <script src="js/talala.js"></script>
     <script>
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);

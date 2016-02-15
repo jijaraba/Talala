@@ -1,10 +1,958 @@
+@import "talala/talala";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  font: {
+    family: $font-family-01;
+    size: 16px;
+  }
+}
+
+header {
+  height: 130px;
+  width: 100%;
+  z-index: 999999;
+  position: absolute;
+  .talala-header {
+    position: relative;
+    .talala-logo {
+      background: url("../img/logo.png") no-repeat;
+      width: 213px;
+      height: 100px;
+      position: absolute;
+      left: 50px;
+      top: 15px;
+    }
+    .talala-nav {
+      position: absolute;
+      width:550px;
+      right:50px;
+      top: 0px;
+      nav {
+        ul {
+          li {
+            display: inline-block;
+            line-height: 130px;
+            text-align: center;
+            a {
+              width: 100%;
+              text-align: center;
+              font: {
+                family: $font-family-01;
+                size: 1.3em;
+              };
+              padding: 10px 20px;
+              color: $brand-color05;
+              transition: all 1s ease-in;
+              border-top: 1px solid rgba($brand-color02,0);
+              border-bottom: 1px solid rgba($brand-color02,0);
+              &:hover {
+                border-bottom: 1px solid rgba($brand-color03,0.2);
+              }
+            }
+          }
+          &.normal {
+            display: block;
+          }
+          &.mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.talala-phone {
+  text-align: right;
+  position: absolute;
+  margin-top: 15px;
+  margin-right: 20px;
+  right: 0px;
+  font: {
+    family: $font-family-01;
+    size: 1.1em;
+  }
+  color: $brand-color06;
+}
+
 .wrapper {
   min-height: 460px;
-  position: absolute;
+  position: relative;
   overflow: hidden;
-  display: table;
-  height: 100%;
+  height: 800px;
   width: 100%;
   left: 0px;
   top: 0px;
+}
+
+#scene {
+  height: 100%;
+}
+
+.bg {
+  height: 100%;
+  img  {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.magician {
+  img {
+    width: 750px;
+    margin-top: 190px;
+    margin-left: 500px;
+  }
+}
+
+.logo {
+  img {
+    margin-left: 40%;
+    margin-right: 50%;
+    margin-top: 60px;
+  }
+}
+
+.chicken {
+  img {
+    margin-left: 38%;
+    margin-right: 40%;
+    margin-top: 60px;
+    width: 200px;
+  }
+}
+
+.chicken02 {
+  img {
+    margin-left: 62%;
+    margin-right: 40%;
+    margin-top: 70px;
+    width: 150px;
+  }
+}
+
+.countdown {
+    position: absolute;
+    bottom: 5px;
+    width: 600px;
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+}
+
+.countdown {
+  #clock {
+    border-radius: 5px;
+    text-align: center;
+    background: rgba($brand-color01, 0.8);
+    font-size: 4.5em;
+    width: 100%;
+    color: $brand-color02;
+    text-align: center;
+    padding: 11px;
+    font: {
+      family: $font-family-01;
+    };
+  }
+}
+
+.talala-slider {
+  position: relative;
+  width: 100%;
+  .slider-new {
+    position: absolute;
+    top: 400px;
+    transition: all .5s ease-in;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    .arrow-left{
+      float: left;
+      height: 60px;
+      width: 60px;
+      margin-left: 50px;
+      line-height: 60px;
+      text-align: center;
+      display: block;
+      background: url("../img/arrow-left.png") no-repeat;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .arrow-right{
+      float: right;
+      height: 60px;
+      width: 60px;
+      float: right;
+      margin-right: 40px;
+      line-height: 60px;
+      text-align: center;
+      display: block;
+      background: url("../img/arrow-right.png") no-repeat;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.talala-info {
+  background: $brand-color02;
+  height: 700px;
+  width: 100%;
+  .info-container {
+    padding: 60px 120px;
+    ul {
+      li {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.talala-container-text {
+  text-align: center;
+  font: {
+    family: $font-family-01;
+    size: 1.8em;
+  };
+  color: $brand-color05;
+  padding-bottom: 50px;
+  border-bottom: 1px solid $border-color-01;
+  h2 {
+    margin-top: 50px;
+    color: $brand-color01;
+    font: {
+      size: 2.4em;
+    }
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+  }
+  p{
+    margin-top: 60px;
+    padding: 20px 5px;
+  }
+}
+
+.talala-services-main {
+  margin-top: 30px;
+  font: {
+    family: $font-family-01;
+    size: 1.2em;
+  }
+  li {
+    color: $brand-color01;
+    &:nth-child(1) {
+      text-align: left;
+    }
+    &:nth-child(2) {
+      text-align: center;
+      color: $brand-color06
+    }
+    &:nth-child(3) {
+      text-align: right;
+    }
+  }
+}
+
+.talala-services {
+  background: rgba(255,255,255,1);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(216,216,216,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8', GradientType=1 );
+  height: 200px;
+  width: 100%;
+
+}
+
+.talala-down {
+  position: absolute;
+  bottom: 25px;
+  transition: all .5s ease-in;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  span {
+    color: $brand-color06;
+    font: {
+      size: 0.9em;
+    }
+    text-align: center;
+  }
+}
+
+.talala-icon-indicator {
+  margin-top: 10px;
+  height: 47px;
+  width: 55px;
+  line-height: 47px;
+  text-align: center;
+  display: inline-block;
+  background: url("../img/indicator.png") no-repeat;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+    .chicken02 {
+      img {
+        display: none;
+      }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .magician {
+    img {
+      width: 700px;
+      margin-top: 200px;
+      margin-left: 200px;
+    }
+  }
+  .chicken {
+    img {
+      margin-left: 20%;
+      margin-right: 40%;
+      margin-top: 130px;
+      width: 170px;
+    }
+  }
+  .chicken02 {
+    img {
+      display: none;
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  header {
+    .talala-header {
+      .talala-nav {
+        nav {
+          ul {
+            &.normal {
+              display: none;
+            }
+            &.mobile {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .talala-phone {
+    display: none;
+  }
+
+  .talala-slider {
+    .slider-new {
+      display: none;
+    }
+  }
+
+    .magician {
+      img {
+        width: 600px;
+        margin-top: 200px;
+        margin-left: 150px;
+      }
+    }
+
+    .chicken {
+      img {
+        margin-left: 7%;
+        margin-right: 40%;
+        margin-top: 130px;
+        width: 150px;
+      }
+    }
+
+    .chicken02 {
+      img {
+        display: none;
+      }
+    }
+
+  .talala-info {
+    height: 800px;
+    .info-container {
+      padding: 5px 5px;
+      ul {
+        li {
+          &:nth-child(1) {
+            width: 100%;
+            text-align: center;
+            img {
+              height: 300px;
+            }
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .talala-container-text {
+    padding: 20px;
+    font: {
+      size: 1.1em;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .talala-services-main {
+    li {
+      padding: 5px;
+      &:nth-child(1) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+  header {
+    .talala-header {
+      .talala-nav {
+        nav {
+          ul {
+            &.normal {
+              display: none;
+            }
+            &.mobile {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .talala-phone {
+    display: none;
+  }
+
+  .talala-slider {
+    .slider-new {
+      display: none;
+    }
+  }
+
+
+  .logo {
+      img {
+        margin-left: 30%;
+        margin-right: 50%;
+        margin-top: 30px;
+        width: 180px;
+      }
+    }
+
+    .magician {
+      img {
+        margin-top: 150px;
+        margin-left: 50px;
+        width: 500px;
+      }
+    }
+
+    .chicken {
+      img {
+        margin-left: 10%;
+        margin-right: 40%;
+        margin-top: 130px;
+        width: 120px;
+      }
+    }
+
+    .chicken02 {
+      img {
+        display: none;
+      }
+    }
+
+    .countdown {
+      bottom: 0px;
+      transform: translate(-50%, 0%);
+    }
+
+    .countdown {
+      #clock {
+        font-size: 2em;
+        border: none;
+      }
+    }
+
+  .talala-info {
+    height: 800px;
+    .info-container {
+      padding: 5px 5px;
+      ul {
+        li {
+          &:nth-child(1) {
+            width: 100%;
+            text-align: center;
+            img {
+              height: 300px;
+            }
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .talala-container-text {
+    padding: 20px;
+    font: {
+      size: 1.1em;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .talala-services-main {
+    li {
+      padding: 5px;
+      &:nth-child(1) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  header {
+    .talala-header {
+      .talala-nav {
+        nav {
+          ul {
+            &.normal {
+              display: none;
+            }
+            &.mobile {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .talala-phone {
+    display: none;
+  }
+
+  .talala-slider {
+    .slider-new {
+      display: none;
+    }
+  }
+
+
+  .logo {
+      img {
+        margin-left: 30%;
+        margin-right: 50%;
+        margin-top: 30px;
+        width: 180px;
+      }
+    }
+
+    .magician {
+      img {
+        margin-top: 150px;
+        margin-left: 50px;
+        width: 400px;
+      }
+    }
+
+    .chicken {
+      img {
+        margin-left: 10%;
+        margin-right: 40%;
+        margin-top: 130px;
+        width: 120px;
+      }
+    }
+
+    .chicken02 {
+      img {
+        display: none;
+      }
+    }
+
+    .countdown {
+      bottom: 0px;
+      transform: translate(-50%, 0%);
+    }
+
+    .countdown {
+      #clock {
+        font-size: 2em;
+        border: none;
+      }
+    }
+
+  .talala-info {
+    height: 800px;
+    .info-container {
+      padding: 5px 5px;
+      ul {
+        li {
+          &:nth-child(1) {
+            width: 100%;
+            text-align: center;
+            img {
+              height: 300px;
+            }
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .talala-container-text {
+    padding: 20px;
+    font: {
+      size: 1.1em;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .talala-services-main {
+    li {
+      padding: 5px;
+      &:nth-child(1) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+
+
+  header {
+    .talala-header {
+      .talala-nav {
+        nav {
+          ul {
+            &.normal {
+              display: none;
+            }
+            &.mobile {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .talala-phone {
+    display: none;
+  }
+
+  .talala-slider {
+    .slider-new {
+      display: none;
+    }
+  }
+
+    .logo {
+      img {
+        margin-left: 30%;
+        margin-right: 50%;
+        margin-top: 30px;
+        width: 150px;
+      }
+    }
+
+    .magician {
+      img {
+        margin-top: 180px;
+        margin-left: 30px;
+        width: 340px;
+      }
+    }
+
+    .chicken {
+      img {
+        margin-left: 10%;
+        margin-right: 40%;
+        margin-top: 130px;
+        width: 120px;
+      }
+    }
+
+    .chicken02 {
+      img {
+        margin-left: 70%;
+        margin-right: 40%;
+        margin-top: 120px;
+        width: 90px;
+      }
+    }
+
+    .countdown {
+      bottom: 0px;
+      transform: translate(-50%, 0%);
+    }
+
+    .countdown {
+      #clock {
+        font-size: 2em;
+        border: none;
+      }
+    }
+
+  .talala-info {
+    height: 800px;
+    .info-container {
+      padding: 5px 5px;
+      ul {
+        li {
+          &:nth-child(1) {
+            width: 100%;
+            text-align: center;
+            img {
+              height: 300px;
+            }
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .talala-container-text {
+    padding: 20px;
+    font: {
+      size: 1.1em;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .talala-services-main {
+    li {
+      padding: 5px;
+      &:nth-child(1) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+
+  header {
+    .talala-header {
+      .talala-nav {
+        nav {
+          ul {
+            &.normal {
+              display: none;
+            }
+            &.mobile {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .talala-phone {
+    display: none;
+  }
+
+  .talala-slider {
+    .slider-new {
+      display: none;
+    }
+  }
+
+  .logo {
+      img {
+        margin-left: 30%;
+        margin-right: 50%;
+        margin-top: 30px;
+        width: 150px;
+      }
+    }
+
+    .magician {
+      img {
+        margin-top: 160px;
+        margin-left: 15px;
+        width: 300px;
+      }
+    }
+
+    .chicken {
+      img {
+        margin-left: 10%;
+        margin-right: 40%;
+        margin-top: 100px;
+        width: 100px;
+      }
+    }
+
+    .chicken02 {
+      img {
+        margin-left: 75%;
+        margin-right: 40%;
+        margin-top: 60px;
+        width: 80px;
+      }
+    }
+
+    .countdown {
+      bottom: 0px;
+      transform: translate(-50%, 0%);
+    }
+
+    .countdown {
+      #clock {
+        font-size: 2em;
+        border: none;
+      }
+    }
+
+  .talala-info {
+    height: 800px;
+    .info-container {
+      padding: 5px 5px;
+      ul {
+        li {
+          &:nth-child(1) {
+            width: 100%;
+            text-align: center;
+            img {
+              height: 300px;
+            }
+          }
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .talala-container-text {
+    padding: 20px;
+    font: {
+      size: 1.1em;
+    }
+    h2 {
+      margin-top: 20px;
+    }
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .talala-services-main {
+    li {
+      padding: 5px;
+      &:nth-child(1) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        text-align: center;
+      }
+      &:nth-child(3) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
 }

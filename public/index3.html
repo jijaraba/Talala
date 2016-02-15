@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mago Talala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="BigMountain" />
+    <meta name="description" content="Magia Cómica en Medellín" />
+    <meta name="keywords" content="Magia,Cómica,Medellín" />
+    <link rel="stylesheet" href="css/talala.css">
+</head>
+<body>
+    <section class="wrapper">
+        <ul id="scene">
+            <li class="layer bg" data-depth="0.00">
+                <img src="img/bg.png">
+            </li>
+
+            <li class="layer logo" data-depth="0.20">
+                <img src="img/logo.png">
+            </li>
+            <li class="layer chicken02" data-depth="0.30">
+                <img src="img/chicken02.png">
+            </li>
+            <li class="layer magician" data-depth="0.40">
+                <img src="img/mago.png">
+            </li>
+            <li class="layer chicken" data-depth="0.60">
+                <img src="img/pollo.png">
+            </li>
+        </ul>
+        <div class="countdown">
+            <div id="clock"></div>
+        </div>
+    </section>
+    <script src="js/vendor/parallax/parallax.min.js"></script>
+    <script src="js/vendor/jquery/jquery.js"></script>
+    <script src="js/vendor/jquery.countdown/jquery.countdown.js"></script>
+    <script src="js/talala.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    </script>
+    <script>
+        $('#clock').countdown('2016/02/15', function(event) {
+            var $this = $(this).html(event.strftime('%-D día%!D %H:%M:%S'));
+            });
+    </script>
+</body>
+</html>
