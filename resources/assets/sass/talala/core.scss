@@ -1,9 +1,15 @@
+@import "variables";
 //
 // Core
 // --------------------------------------------------
 
 //== Basic Styles
 
+h1, h2, h3, h4, h5, h6 {
+  font: {
+    family: $font-family-05;
+  }
+}
 
 .grid-100, .grid-90, .grid-80, .grid-70, .grid-60
 .grid-50, .grid-40, .grid-30, .grid-20, .grid-10 {

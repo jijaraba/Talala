@@ -1,2 +1,35 @@
-(function(){var n;n={Main:function(){var n;return n={menu_extended:!1},this.init=function(n){$(window).on("scroll",this.onScroll),$(window).on("resize",this.onResize),this.eventHandler(n)},this.onScroll=function(){},this.onResize=function(){TalalaUtils.Global.setHeightSlider("#viejooeste_container_slider"),console.log(window.innerHeight)},this.gallery_global=function(){},this.eventHandler=function(n){return console.log(n),TalalaUtils.Global.setHeightBody()},this.init(n)}},$(function(){return window.main=new n.Main})}).call(this);
+(function() {
+  var Talala;
+
+  Talala = {
+    Main: function() {
+      var options;
+      options = {
+        menu_extended: false
+      };
+      this.init = function(options) {
+        $(window).on('scroll', this.onScroll);
+        $(window).on('resize', this.onResize);
+        this.eventHandler(options);
+      };
+      this.onScroll = function() {};
+      this.onResize = function() {
+        TalalaUtils.Global.setHeightSlider("#viejooeste_container_slider");
+        console.log(window.innerHeight);
+      };
+      this.gallery_global = function() {};
+      this.eventHandler = function(options) {
+        console.log(options);
+        return TalalaUtils.Global.setHeightBody();
+      };
+      return this.init(options);
+    }
+  };
+
+  $(function() {
+    return window.main = new Talala.Main();
+  });
+
+}).call(this);
+
 //# sourceMappingURL=talala.js.map
