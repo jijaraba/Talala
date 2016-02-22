@@ -5,10 +5,33 @@
 
 //== Basic Styles
 
+a {
+  text-decoration: none;
+  color: $brand-color01;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font: {
     family: $font-family-05;
   }
+}
+
+.center {
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 350px;
+  height: 50px;
+  text-align: center;
+  font: {
+    size: 3em;
+    family: $font-family-01;
+    weight: normal;
+  }
+  color: $brand-color04;
 }
 
 .grid-100, .grid-90, .grid-80, .grid-70, .grid-60
