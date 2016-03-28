@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/talala":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/talala","hostpath":"/Users/jijaraba/Projects/BigMountain/Talala","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/jijaraba/Projects/BigMountain/Talala","disabled":false,"__vagrantfile":true}}}

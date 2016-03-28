@@ -14,7 +14,9 @@
 <body>
     <header>
         <section class="talala-header">
-            <div class="talala-logo"></div>
+            <div class="talala-logo">
+                <img src="/img/logo.png" alt="Mago Talala">
+            </div>
             <div class="talala-nav">
                 <nav>
                     <div class="talala-phone" itemscope itemtype="http://schema.org/Person">
@@ -45,9 +47,7 @@
             <li class="slider" id="slider-2">
                 <div>
                     <ul id="scene">
-                        <li class="layer bg" data-depth="0.00">
-                            <img src="img/bg.png">
-                        </li>
+                        <li class="layer bg" data-depth="0.00"></li>
                         <li class="layer chicken02" data-depth="0.30">
                             <img src="img/chicken02.png">
                         </li>
@@ -65,13 +65,19 @@
             </li>
         </ul>
         <div class="slider-new">
-            <div id="arrow_left" class="arrow-left"></div>
-            <div id="arrow_right" class="arrow-right"></div>
+            <div id="arrow_left" class="arrow-left">
+                <img src="/img/arrow-left.png" alt="">
+            </div>
+            <div id="arrow_right" class="arrow-right">
+                <img src="/img/arrow-right.png" alt="">
+            </div>
         </div>
         <div class="talala-down" id="talala_indicator">
             <span onclick="TalalaUtils.Global.goTo('about')">Desplazar hacia abajo</span>
             <br>
-            <span onclick="TalalaUtils.Global.goTo('about')" class="talala-icon-indicator"></span>
+            <div onclick="TalalaUtils.Global.goTo('about')" class="talala-icon-indicator">
+                <img src="/img/indicator.png" alt="Mago Talala">
+            </div>
         </div>
     </section>
     <section id="about" class="talala-info page-section">
@@ -104,9 +110,28 @@
                 </li>
             </ul>
         </section>
-        <section id="specification_show" class="page-info">
+        <section id="specification_show" class="talala-specification-show page-info">
             <div class="close-info" data-close="specification_show">Close</div>
-            <div><!-- TODO SPEC --></div>
+            <section>
+                <ul class="display-horizontal col-100">
+                    <li class="col-30 specification-header">Imgen</li>
+                    <li class="col-70 specification-info">
+                        <ul class="display-horizontal col-100">
+                            <li class="col-25 gutter-15">Sonido Principal</li>
+                            <li class="col-25 gutter-15">Iluminación</li>
+                            <li class="col-25 gutter-15">Escenario</li>
+                            <li class="col-25 gutter-15">Montaje y Desmontaje</li>
+                            <li class="col-25 gutter-15">Personal</li>
+                            <li class="col-25 gutter-15">Camerino</li>
+                            <li class="col-25 gutter-15">Transporte</li>
+                            <li class="col-25 gutter-15">Display 08</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <div class="footer">
+                Fotter
+            </div>
         </section>
         <section id="hire_show" class="page-info">
             <div class="close-info" data-close="hire_show">Close</div>

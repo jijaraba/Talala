@@ -9,7 +9,7 @@ Talala =
         width: 0,
         count: 0,
       }
-      animationTime: 1500,
+      animationTime: 2000,
       factorTime: 1,
 
 
