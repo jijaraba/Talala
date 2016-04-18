@@ -98,7 +98,6 @@ header {
 }
 
 .wrapper {
-  min-height: 460px;
   position: relative;
   overflow: hidden;
   height: 800px;
@@ -304,11 +303,6 @@ header {
       }
     }
   }
-  > .footer {
-    height: 100px;
-    background-color: $brand-color02;
-    margin: 0px -20px -30px 0px;
-  }
 }
 
 .talala-container-text {
@@ -326,6 +320,7 @@ header {
     color: $brand-color01;
     font: {
       size: 2.4em;
+      family: $font-family-06;
     }
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
     font-weight: normal;
@@ -405,6 +400,81 @@ header {
       transform: scale(1.1);
     }
   }
+}
+
+
+@media screen and (max-height: 700px) {
+
+  .wrapper {
+    #scene {
+      > .magician {
+        img {
+          margin-top: 100px;
+          width: 600px;
+        }
+      }
+      > .chicken {
+        img {
+          margin-left: 400px;
+          margin-top: 100px;
+          width: 200px;
+        }
+      }
+      > .chicken02 {
+        img {
+          margin-left: 630px;
+          margin-top: 50px;
+          width: 150px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-height: 600px) {
+
+  .wrapper {
+    #scene {
+      > .magician {
+        img {
+          margin-top: 60px;
+          width: 500px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-height: 480px) {
+
+  .wrapper {
+    #scene {
+      > .magician {
+        img {
+          margin-top: 60px;
+          width: 400px;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-height: 375px) {
+
+  .wrapper {
+    #scene {
+      > .magician {
+        img {
+          margin-top: 60px;
+          width: 300px;
+        }
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 1280px) {
@@ -539,7 +609,6 @@ header {
 
 
   .talala-info {
-    height: 800px;
     .info-container {
       padding: 5px 5px;
       ul {
@@ -685,7 +754,6 @@ header {
   }
 
   .talala-info {
-    height: 800px;
     .info-container {
       padding: 5px 5px;
       ul {
@@ -835,7 +903,6 @@ header {
   }
 
   .talala-info {
-    height: 800px;
     .info-container {
       padding: 5px 5px;
       ul {
@@ -855,13 +922,40 @@ header {
     }
   }
 
+  .talala-specification-show {
+    > section {
+      > ul {
+        > li {
+          &.specification-header {
+            width: 100%;
+            height: 300px;
+          }
+          &.specification-info {
+            width: 100%;
+            padding: 60px 0px;
+            > ul {
+              > li {
+                height: 300px;
+                background: $brand-color01;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
   .talala-container-text {
     padding: 20px;
     font: {
       size: 1.1em;
     }
     h2 {
-      margin-top: 20px;
+      margin-top: 10px;
+      font: {
+        size: 2.0em;
+      }
     }
     p {
       margin-top: 10px;
@@ -930,7 +1024,7 @@ header {
   .talala-slider {
     > .slider-new {
       display: block;
-      top: 200px;
+      top: 260px;
       .arrow-right {
         width: 40px;
         margin-right: 15px;
@@ -946,27 +1040,51 @@ header {
     #scene {
       > .magician {
         img {
-          margin-top: 130px;
+          margin-top: 170px;
           margin-left: 25px;
           width: 300px;
         }
       }
       > .chicken {
         img {
-          margin-left: 20px;
-          margin-top: 100px;
+          margin-left: 40px;
+          margin-top: 120px;
           width: 100px;
         }
       }
       > .chicken02 {
         img {
-          margin-left: 185px;
-          margin-top: 50px;
+          margin-left: 210px;
+          margin-top: 80px;
           width: 80px;
         }
       }
     }
   }
+
+  .talala-specification-show {
+    > section {
+      > ul {
+        > li {
+          &.specification-header {
+            width: 100%;
+            height: 300px;
+          }
+          &.specification-info {
+            width: 100%;
+            padding: 60px 0px;
+            > ul {
+              > li {
+                height: 300px;
+                background: $brand-color01;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 
   .talala-icon-indicator {
     margin-top: 10px;
@@ -1067,7 +1185,6 @@ header {
   }
 
   .talala-info {
-    height: 800px;
     .info-container {
       padding: 5px 5px;
       ul {
@@ -1086,6 +1203,30 @@ header {
       }
     }
   }
+
+  .talala-specification-show {
+    > section {
+      > ul {
+        > li {
+          &.specification-header {
+            width: 100%;
+            height: 300px;
+          }
+          &.specification-info {
+            width: 100%;
+            padding: 60px 0px;
+            > ul {
+              > li {
+                height: 300px;
+                background: $brand-color01;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 
   .talala-container-text {
     padding: 20px;
@@ -1217,11 +1358,10 @@ header {
   }
 
   .talala-info {
-    height: 800px;
     .info-container {
       padding: 5px 5px;
-      ul {
-        li {
+      > ul {
+        > li {
           &:nth-child(1) {
             width: 100%;
             text-align: center;
@@ -1237,8 +1377,31 @@ header {
     }
   }
 
+  .talala-specification-show {
+    > section {
+      > ul {
+        > li {
+          &.specification-header {
+            width: 100%;
+            height: 300px;
+          }
+          &.specification-info {
+            width: 100%;
+            padding: 60px 0px;
+            > ul {
+              > li {
+                height: 300px;
+                background: $brand-color01;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .talala-container-text {
-    padding: 20px;
+    padding: 20px 15px;
     font: {
       size: 1.1em;
     }

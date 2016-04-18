@@ -4,25 +4,22 @@ TalalaUtils =
     setHeight: (elem) ->
       element = $ elem
       height = element.height()
-      $(".imagen-block .block").height(height)
+      $(elem).height(height)
       false
 
-    setHeightSlider: (elem) ->
-      element = $ elem
-      height = element.height()
-      $(".container-baseline").height(height)
-      false
-
-    setHeightBody: () ->
+    setHeightSlider: () ->
       height = window.innerHeight
-      width = window.innerWidth
 
       if window.innerHeight >= 800
-        $(".page-section").height(height)
+        $("#main-page").height(height)
 
       if window.innerHeight <= 660
-        $(".page-section").height(height)
+        $("#main-page").height(height)
 
+      false
+
+    setWidthBody: () ->
+      width = window.innerWidth
       $(".page-info").css({
         "right": "-" + width + "px",
         "display": "none"

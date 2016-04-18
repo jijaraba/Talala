@@ -22,18 +22,20 @@ Talala =
     @onScroll = () ->
 
     @onResize = () ->
-#Slider Width
+      #Slider Width
       slider_container()
       TalalaUtils.Global.sliderControl('-', options.slider, 'normal')
-      #Initials Height
-      TalalaUtils.Global.setHeightBody()
+      #Initials Height and Width
+      TalalaUtils.Global.setHeightSlider()
+      TalalaUtils.Global.setWidthBody()
       return
 
     @gallery_global = () ->
       return
 
     @eventHandler = (options)->
-      TalalaUtils.Global.setHeightBody()
+      TalalaUtils.Global.setHeightSlider()
+      TalalaUtils.Global.setWidthBody()
 
       #Loading
       $('#loading').animate({opacity: '1'}, options.animationTime * options.factorTime, () ->

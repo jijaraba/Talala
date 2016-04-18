@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Mago Talala - Eventos de Magia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="BigMountain"/>
+    <meta name="author" content="BigMountain Solutions"/>
     <meta name="description"
           content="El Mago Talala es la mezcla ideal entre el humor y la magia, un espectáculo que rompe el esquema tradicional con un estilo de “magia de lo Absurdo”"/>
     <meta name="keywords" content="Magia,Cómica,Medellín,Eventos Empresariales,Producción de Radio"/>
@@ -80,10 +80,10 @@
             </div>
         </div>
     </section>
-    <section id="about" class="talala-info page-section">
+    <section id="about" onload="TalalaUtils.Global.setHeight('#about')" class="talala-info page-section">
         <section class="info-container">
             <ul class="display-horizontal col-100">
-                <li class="col-40">
+                <li id="magician_info" class="col-40">
                     <img src="img/magician02.png" alt="Mago Talala">
                 </li>
                 <li class="col-60">
@@ -102,7 +102,7 @@
                         <li class="col-40">
                             <div itemscope itemtype="http://schema.org/Person">
                                 <span itemprop="telephone">(+57) 3174369133</span>
-                                <span itemprop="email">info@magotalala.com</span>
+                                <span itemprop="email">contacto@magotalala.com</span>
                             </div>
                         </li>
                         <li class="col-30"><a href="#" id="hire">Contratar ></a></li>
@@ -129,9 +129,6 @@
                     </li>
                 </ul>
             </section>
-            <div class="footer">
-                Fotter
-            </div>
         </section>
         <section id="hire_show" class="page-info">
             <div class="close-info" data-close="hire_show">Close</div>
@@ -140,7 +137,7 @@
     </section>
     <section id="services" class="talala-services page-section"><!-- TODO Services --></section>
     <section id="gallery" class="talala-gallery page-section"><!-- TODO Gallery --></section>
-    <section id="contact" class="talala-contact page-section"><!-- TOFO Contact --></section>
+    <section id="contact" class="talala-contact page-section"><!-- TODO Contact --></section>
     <script src="js/vendor/parallax/parallax.min.js"></script>
     <script src="js/vendor/jquery/jquery.js"></script>
     <script src="js/vendor/jquery-ui/jquery-ui.js"></script>
@@ -149,11 +146,6 @@
     <script>
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
-    </script>
-    <script>
-        $('#clock').countdown('2016/02/15', function (event) {
-            var $this = $(this).html(event.strftime('%-D día%!D %H:%M:%S'));
-        });
     </script>
 </body>
 </html>

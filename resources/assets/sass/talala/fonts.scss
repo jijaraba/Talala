@@ -23,3 +23,9 @@
   font-family: "Questrial Regular";
   src: url("fonts/Questrial-Regular.ttf")
 }
+@font-face {
+  font-family: "Alice Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local(Alice),local(Alice-Regular),url(//fonts.gstatic.com/s/alice/v7/sZyKh5NKrCk1xkCk_F1S8A.eot?#) format("eot"),url(//fonts.gstatic.com/s/alice/v7/l5RFQT5MQiajQkFxjDLySg.woff2) format("woff2"),url(//fonts.gstatic.com/s/alice/v7/_H4kMcdhHr0B8RDaQcqpTA.woff) format("woff");
+}
