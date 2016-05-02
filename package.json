@@ -1,4 +1,6 @@
 {
+  "description": "Mago Talala",
+  "license" : "SEE LICENSE IN magotalala.txt",
   "devDependencies": {
     "gulp": "^3.9.0",
     "laravel-elixir": "^4.2.0"

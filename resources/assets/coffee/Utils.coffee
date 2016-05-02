@@ -2,20 +2,16 @@ TalalaUtils =
   Global:
 
     setHeight: (elem) ->
-      element = $ elem
-      height = element.height()
+      height = window.innerHeight
       $(elem).height(height)
       false
 
     setHeightSlider: () ->
       height = window.innerHeight
-
       if window.innerHeight >= 800
         $("#main-page").height(height)
-
       if window.innerHeight <= 660
         $("#main-page").height(height)
-
       false
 
     setWidthBody: () ->

@@ -11,6 +11,9 @@ Talala =
       }
       animationTime: 2000,
       factorTime: 1,
+      info: {
+        visibility: true
+      }
 
 
     @init = (options)->
@@ -28,6 +31,7 @@ Talala =
       #Initials Height and Width
       TalalaUtils.Global.setHeightSlider()
       TalalaUtils.Global.setWidthBody()
+      TalalaUtils.Global.setHeight('.page-general')
       return
 
     @gallery_global = () ->
@@ -36,6 +40,7 @@ Talala =
     @eventHandler = (options)->
       TalalaUtils.Global.setHeightSlider()
       TalalaUtils.Global.setWidthBody()
+      TalalaUtils.Global.setHeight('.page-general')
 
       #Loading
       $('#loading').animate({opacity: '1'}, options.animationTime * options.factorTime, () ->
@@ -78,6 +83,16 @@ Talala =
         e.preventDefault()
         $this = $(this)
         TalalaUtils.Global.goTo($this.data("menu"))
+        false
+
+      $("#info_card_black").bind "click", (e) ->
+        e.preventDefault()
+        if options.info.visibility
+          $('#info_article').css({'visibility': 'visible'});
+          options.info.visibility = false
+        else
+          $('#info_article').css({'visibility': 'hidden'});
+          options.info.visibility = true
         false
 
       $("#arrow_right").bind "click", (e) ->
